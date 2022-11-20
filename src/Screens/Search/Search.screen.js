@@ -10,10 +10,11 @@ import MovieCard from '../../Components/MovieCard/MovieCard.component';
 import styles from './Search.styles';
 import commonStyles from '../../Commons/common.styles';
 import { DESCRIPTION_SCREEN } from '../screenName';
+import { connect } from 'react-redux';
 
-function Search({navigation}) {
+function Search(props) {
 
-    const [Movies, setMovies] = useState([])
+    const [Movies, setMovies] = useState(props.Movies.movies)
     const [SearchText, setSearchText] = useState("")
     const [Page, setPage] = useState(1)
     const [ShowLoadMore, setShowLoadMore] = useState(false)
@@ -34,7 +35,7 @@ function Search({navigation}) {
         .catch(err => {
             setRefresh(false)
 
-            setMovies([])
+            setMovies(props.Movies.movies)
         })
     }
 
@@ -63,7 +64,7 @@ function Search({navigation}) {
                     initialNumToRender={7}
                     renderItem={({ item }) => <MovieCard item={item} action={() => {
                         Keyboard.dismiss()
-                        navigation.push(DESCRIPTION_SCREEN, { movie: item })}
+                        props.navigation.push(DESCRIPTION_SCREEN, { movie: item })}
                     } /> }
                     keyExtractor={(item, index) => item.original_title+item.id}
                     getItemCount={data => data?.length}
@@ -93,4 +94,10 @@ function Search({navigation}) {
   )
 }
 
-export default Search
+const mapStateToProps = state => {
+    return {
+        Movies: state.Movies
+    };
+};
+
+export default connect(mapStateToProps, null)(Search)

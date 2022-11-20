@@ -1,5 +1,6 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import {User} from './reducers/user.reducer'
+import {Movies} from './reducers/movies.reducer'
 
 /**
  * This is a reducer, a pure function with (state, action) => state signature.
@@ -15,7 +16,8 @@ import {User} from './reducers/user.reducer'
  */
 
 const appReducer = combineReducers({
-    User
+    User,
+    Movies
 });
 
 const rootReducer = (state, action) => {

@@ -6,14 +6,19 @@ import MovieCard from '../../Components/MovieCard/MovieCard.component'
 import styles from './Home.styles'
 import commonStyles from '../../Commons/common.styles'
 import { DESCRIPTION_SCREEN } from '../screenName'
+import { SetTrendingMovies } from '../../Redux/actions/movies.action'
+import { connect } from 'react-redux'
 
-function Home({ navigation }) {
+function Home(props) {
 
     const [Movies, setMovies] = useState([])
 
     useEffect(() => {
         GetTrendingMovies()
-            .then(data => setMovies(data))
+            .then(data => {
+                setMovies(data)
+                props.SetTrendingMovies(data)
+            })
             .catch(err => console.log(err))
     }, [])
 
@@ -27,7 +32,7 @@ function Home({ navigation }) {
                     data={Movies}
                     style={{ width: '100%' }}
                     initialNumToRender={7}
-                    renderItem={({ item }) => <MovieCard item={item} action={() => navigation.push(DESCRIPTION_SCREEN, { movie: item })} /> }
+                    renderItem={({ item }) => <MovieCard item={item} action={() => props.navigation.push(DESCRIPTION_SCREEN, { movie: item })} /> }
                     keyExtractor={(item, index) => item.id}
                     getItemCount={data => data?.length}
                     getItem={(data, index) => data[index]}
@@ -39,4 +44,10 @@ function Home({ navigation }) {
     )
 }
 
-export default Home
+const mapDispatchToProps = dispatch => {
+    return {
+        SetTrendingMovies: (Movies) => dispatch(SetTrendingMovies(Movies))
+    };
+};
+
+export default connect(null, mapDispatchToProps)(Home)
