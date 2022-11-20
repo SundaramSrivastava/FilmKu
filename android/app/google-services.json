@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1002216739271",
+    "project_id": "filmku-f9ec8",
+    "storage_bucket": "filmku-f9ec8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002216739271:android:3752850861b1ef415d49e2",
+        "android_client_info": {
+          "package_name": "com.filmku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002216739271-967mfrvfqib316ud7bmq4lolkugr2fnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgG8cQtu1obsMFv6YStUiyZSE02nLstEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002216739271-967mfrvfqib316ud7bmq4lolkugr2fnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
