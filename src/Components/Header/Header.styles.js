@@ -54,10 +54,4 @@ const styles = StyleSheet.create({
     }
 })
 
-// chawal 
-// Dal arahe
-// gobhi
-// beens
-// refind
-//lobhiya
 export default styles
