@@ -46,6 +46,6 @@ Run it Locally on Android
 App automatically creates registers new users. Directly enter your
 email id and password.
 
-After for signing out press the account icon on app header and press
+For signing out press the account icon on app header and press
 logout button.
 
