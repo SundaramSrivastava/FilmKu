@@ -15,7 +15,7 @@ function Input({ label = null, placeholder = null, password = false, value = '',
     <View>
       {
         label ?
-          <Text style={[commonStyles.text, commonStyles.boldText, styles.Label]}>{label}</Text>
+          <Text style={[styles.Label]}>{label}</Text>
           :
           <></>
       }

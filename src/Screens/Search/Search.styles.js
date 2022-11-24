@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    screenContainer: {
-        paddingHorizontal: 20
+    screenContainer: { 
+        backgroundColor: '#fff',
+        paddingTop: 60+20+16+10,
     },
     EmptyText: {
         height: 500, 

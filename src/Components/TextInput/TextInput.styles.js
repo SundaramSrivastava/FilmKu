@@ -10,7 +10,10 @@ const styles = StyleSheet.create({
     },
     Label: { 
         fontSize: 20, 
-        paddingHorizontal: 5 
+        paddingHorizontal: 5 ,
+        fontFamily: 'Mulish-Bold',
+        color: '#000',
+        marginTop: 10
     }
 })
 

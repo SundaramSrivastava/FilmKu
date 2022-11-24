@@ -2,7 +2,12 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     CardContainer: { 
-        marginTop: 20 
+        marginTop: 20,
+    },
+    HCardContainer: { 
+        marginTop: 20,
+        maxWidth: 212,
+        flexWrap: 'wrap'
     },
     Poster: { 
         height: 120, 
@@ -11,7 +16,7 @@ const styles = StyleSheet.create({
         marginRight: 10 
     },
     DetailsContainer: { 
-        marginTop: 5 
+        marginTop: 15 
     },
     Title: { 
         fontSize: 18 
@@ -24,7 +29,10 @@ const styles = StyleSheet.create({
     Rating: { 
         fontSize: 12, 
         marginLeft: 10 
-    }
+    },
+    // HPoster: {
+    //     marginRight: 16 
+    // }
 })
 
 export default styles

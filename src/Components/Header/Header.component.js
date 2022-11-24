@@ -7,12 +7,15 @@ import { connect } from 'react-redux';
 import { Logout } from '../../Redux/actions/user.action';
 import styles from './Header.styles';
 import commonStyles from '../../Commons/common.styles';
+import { faBell } from '@fortawesome/free-regular-svg-icons';
+import { faBars, faHamburger } from '@fortawesome/free-solid-svg-icons';
+// import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 const ICON_COLOR = '#000000'
 
 function Header(props) {
     const [ShowDropDown, setShowDropDown] = useState(false)
-    
+
     const handleDropDownToggler = () => {
         setShowDropDown(!ShowDropDown)
     }
@@ -22,14 +25,21 @@ function Header(props) {
     return (
         <>
             <View style={[styles.HeaderContainer]}>
-                <View style={[styles.HeaderTitleContainer]}>
-                    <Text style={[commonStyles.text, commonStyles.boldText, commonStyles.textCenter, styles.HeaderFont]}>FilmKu</Text>
-                </View>
                 <View style={[styles.DropDownTogglerContainer]}>
                     <TouchableOpacity onPress={handleDropDownToggler}>
                         <View style={[styles.IconContainer]}>
-                            <FontAwesomeIcon icon={faUser} color={ICON_COLOR} />
+                            <FontAwesomeIcon icon={faBars} color={ICON_COLOR} />
                         </View>
+                    </TouchableOpacity>
+                </View>
+                <View style={[styles.HeaderTitleContainer]}>
+                    <Text style={[commonStyles.commonHeadings, commonStyles.textCenter]}>FilmKu</Text>
+                </View>
+                <View style={[styles.DropDownTogglerContainer]}>
+                    <TouchableOpacity onPress={handleDropDownToggler}>
+                        {/* <View style={[styles.IconContainer]}> */}
+                            <FontAwesomeIcon icon={faBell} color={'#000'} size={20} />
+                        {/* </View> */}
                     </TouchableOpacity>
                 </View>
             </View>

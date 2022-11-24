@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Alert, Keyboard, RefreshControl, SafeAreaView, Text, View } from 'react-native'
+import { Alert, Keyboard, RefreshControl, SafeAreaView, ScrollView, Text, View } from 'react-native'
 import auth from '@react-native-firebase/auth';
 import Button from '../../Components/Button/Button.component'
 import Input from '../../Components/TextInput/TextInput.component'
@@ -49,16 +49,17 @@ function Login() {
           <></>
       }
 
-      <SafeAreaView style={[styles.screenContainer ]}>
+      <View style={[styles.screenContainer]}>
+      <View style={{width: '40%', position: 'absolute', height: '150%', top: 0, zIndex: 0, bottom: 0, backgroundColor: '#F2F2F2'}}/>
         <View style={[styles.AppTitleContainer]}>
-          <Text style={[commonStyles.text, commonStyles.textCenter, commonStyles.boldText, styles.AppTitle]}>Film-Ku</Text>
+          <Text style={[styles.AppTitle]}>Film-Ku</Text>
         </View>
         <View>
           <Input value={email} onChangeText={setEmail} label='Email' placeholder={"test@xyz.com"} />
           <Input value={password} onChangeText={setPassword} label='Password' placeholder={"xxxxxxx"} password />
           <Button action={login} label={'Submit'} />
         </View>
-      </SafeAreaView>
+      </View>
     </>
   )
 }

@@ -3,12 +3,9 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     backButton: {
         position: 'absolute',
-        top: 0,
+        top: 28,
         zIndex: 99999999999,
-        left: 0,
-        backgroundColor: '#00000030',
-        height: 50,
-        width: 50,
+        left: 25,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -17,16 +14,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     Poster: {
-        height: 300,
-        width: '100%'
+        // height: 300,
+        // width: '100%'
     },
     DescriptionContainer: {
-        marginTop: -50,
+        marginTop: -60,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         backgroundColor: '#fff',
-        paddingHorizontal: 20,
-        paddingVertical: 20,
+        padding: 24,
         borderColor: '#000',
         elevation: 20,
     },
@@ -36,7 +32,7 @@ const styles = StyleSheet.create({
     RatingContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: 10
+        marginTop: 8
     },
     RatingText: { 
         fontSize: 15, 

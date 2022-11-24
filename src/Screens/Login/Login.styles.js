@@ -11,8 +11,9 @@ const styles = StyleSheet.create({
         zIndex: 999999 
     },
     screenContainer: { 
-        flex: 1, 
-        paddingHorizontal: 20 
+        backgroundColor: '#fff',
+        paddingHorizontal: 24,
+        flex: 1
     },
     AppTitleContainer: { 
         height: 220, 
@@ -20,7 +21,10 @@ const styles = StyleSheet.create({
     },
     AppTitle: { 
         fontSize: 30, 
-        marginTop: 100 
+        marginTop: 100 ,
+        fontFamily: 'Mulish-Bold',
+        textAlign: 'center',
+        color: '#000'
     }
 })
 

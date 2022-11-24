@@ -8,6 +8,7 @@ import { Logout, SetUser } from '../Redux/actions/user.action';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Description from '../Screens/Description/Description.screen';
 import { DESCRIPTION_SCREEN } from '../Screens/screenName';
+import { StatusBar } from 'react-native';
 
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +39,7 @@ function AppNavigator(props) {
 
     return (
         <>
+        <StatusBar translucent={true} backgroundColor={'transparent'} barStyle='dark-content' />
             <NavigationContainer>
                 {
                     props.User.loggedIn ?
